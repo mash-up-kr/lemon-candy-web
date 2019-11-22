@@ -1,0 +1,13 @@
+{
+  "name": "space-project",
+  "description": "우주배포팀",
+  "author": "",
+  "license": "ISC",
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {},
+  "dependencies": {
+    "lerna": "^3.19.0"
+  }
+}

@@ -6,7 +6,11 @@
   "engines": {
     "node": ">=10"
   },
-  "scripts": {},
+  "scripts": {
+    "clean": "lerna clean --yes",
+    "bootstrap": "lerna bootstrap",
+    "build": "npm run clean && npm run bootstrap && lerna exec npm run build"
+  },
   "dependencies": {
     "lerna": "^3.19.0"
   }

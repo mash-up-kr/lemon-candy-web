@@ -9,7 +9,9 @@
     "hex.json"
   ],
   "scripts": {
+    "build": "node build.js"
   },
   "devDependencies": {
+    "lodash": "4.17.15"
   }
 }

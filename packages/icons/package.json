@@ -1,0 +1,17 @@
+{
+  "name": "@space/icons",
+  "version": "0.0.1",
+  "description": "Space Team Icons",
+  "main": "index.js",
+  "files": [
+    "svgs",
+    "index.d.ts",
+    "index.js"
+  ],
+  "scripts": {
+
+  },
+  "devDependencies": {
+    "lodash": "4.17.15"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "name": "@space/colors",
+  "version": "0.0.1",
+  "description": "Space Team Colors",
+  "license": "ISC",
+  "main": "hex.json",
+  "files": [
+    "index.d.ts",
+    "hex.json"
+  ],
+  "scripts": {
+  },
+  "devDependencies": {
+  }
+}

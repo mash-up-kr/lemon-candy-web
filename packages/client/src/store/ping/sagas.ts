@@ -1,6 +1,6 @@
-import { PingActionTypes } from "./types";
 import { takeEvery, call, put } from 'redux-saga/effects';
-import {PingActions} from "./actions";
+import { PingActionTypes } from '@/store/ping/types';
+import { PingActions } from '@/store/ping/actions';
 
 function* flowPing() {
   try {

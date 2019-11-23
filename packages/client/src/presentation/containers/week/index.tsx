@@ -1,6 +1,6 @@
 import React, { useCallback } from 'react';
 import { useDispatch } from 'react-redux';
-import { PingActionTypes } from "../../../store/ping/types";
+import { PingActionTypes } from '@/store/ping/types';
 
 const WeekContainer: React.FC = () => {
   const dispatch = useDispatch();

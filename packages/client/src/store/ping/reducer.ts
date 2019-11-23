@@ -1,9 +1,9 @@
 import produce from 'immer';
-import {PingActionTypes} from "./types";
-
-const initialState = {};
+import { PingActionTypes } from '@/store/ping/types';
 
 interface Ping {}
+
+const initialState = {};
 
 const _successPing = (state: any, draft: Ping) => {
   console.log('_success Ping Reducer');

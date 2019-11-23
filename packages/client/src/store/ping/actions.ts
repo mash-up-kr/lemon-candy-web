@@ -1,5 +1,5 @@
 import { action } from 'typesafe-actions';
-import {PingActionTypes} from "./types";
+import { PingActionTypes } from "@/store/ping/types";
 
 export const PingActions = {
   requestPing: () => action(PingActionTypes.REQUEST_PING),

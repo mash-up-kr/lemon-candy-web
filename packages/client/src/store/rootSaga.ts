@@ -1,5 +1,5 @@
 import { all, call, delay, spawn } from 'redux-saga/effects';
-import PingSaga from './ping/sagas';
+import PingSaga from '@/store/ping/sagas';
 
 const makeRestartable = (saga: any) => {
   return function* () {

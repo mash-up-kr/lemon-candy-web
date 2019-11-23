@@ -23,6 +23,7 @@
     "simple-import-sort/sort": "error",
     "sort-imports": "off",
     "import/order": "off",
+    "import/no-unresolved": "off",
     "max-len":["error", { "code": 100 }],
     "semi": 2,
     "indent": ["error",2],
@@ -31,7 +32,7 @@
     "@typescript-eslint/no-explicit-any": 0,
     "@typescript-eslint/camelcase": "off",
     "@typescript-eslint/no-angle-bracket-type-assertion": "off",
-    "@typescript-eslint/no-var-requires": 0,
+    "@typescript-eslint/no-var-requires": 0
   }
 }
 

@@ -1,5 +1,6 @@
 import React, { useCallback } from 'react';
 import { useDispatch } from 'react-redux';
+
 import { PingActionTypes } from '@/store/ping/types';
 
 const WeekContainer: React.FC = () => {
@@ -9,7 +10,7 @@ const WeekContainer: React.FC = () => {
   }, [dispatch]);
 
   return (
-    <div onClick={requestPing}>안녕</div>
+    <div onClick={ requestPing } role="button">안녕</div>
   );
 };
 

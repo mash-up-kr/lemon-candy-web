@@ -1,8 +1,9 @@
-import pingReducer from '@/store/ping/reducer';
 import { combineReducers } from 'redux';
 
-export const rootReducer = () => {
-  return combineReducers<any>({
-    ping: pingReducer
-  })
-};
+import pingReducer from '@/store/ping/reducer';
+
+export const rootReducer = () => combineReducers<any>({
+  ping: pingReducer,
+});
+
+export default { rootReducer };

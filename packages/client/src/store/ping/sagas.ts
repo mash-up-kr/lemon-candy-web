@@ -6,7 +6,7 @@ function* flowPing() {
   try {
     yield put(PingActions.successPing());
     yield call(console.log, 'flow ping execute');
-  } catch(e) {
+  } catch (e) {
     yield put(PingActions.failurePing());
   }
 }

@@ -67,8 +67,6 @@ body {
   width: 100%;
   max-width: 600px;
   min-height: 100vh;
-}
-
-.App {
   background: black;
 }
+

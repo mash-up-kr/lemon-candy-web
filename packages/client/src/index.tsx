@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import EntryRoute from './presentation/routes';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<EntryRoute />, document.getElementById('root'));

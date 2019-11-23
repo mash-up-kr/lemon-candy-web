@@ -1,9 +1,14 @@
 import React from 'react';
 
+import Header from '../components/header';
 
 const EntryRoute: React.FC = () => (
   <div className="App">
-    안녕하세요
+    <Header
+      title="2019"
+      leftSide="설정"
+      rightSide="리마인드"
+    />
   </div>
 );
 

@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Header from '@/presentation/components/header';
+import FloatingButton from '@/presentation/components/floatingButton';
 
 const EntryRoute: React.FC = () => (
   <div className="App">
@@ -9,6 +10,7 @@ const EntryRoute: React.FC = () => (
       leftSide="설정"
       rightSide="리마인드"
     />
+    <FloatingButton onClick={ say('클릭') } />
   </div>
 );
 

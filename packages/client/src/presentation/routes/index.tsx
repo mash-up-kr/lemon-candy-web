@@ -2,7 +2,6 @@ import React from 'react';
 
 import Header from '@/presentation/components/header';
 
-
 const EntryRoute: React.FC = () => (
   <div className="App">
     <Header

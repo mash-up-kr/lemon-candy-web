@@ -1,7 +1,7 @@
 {
-  "name": "@space/colors",
+  "name": "@lemon/colors",
   "version": "0.0.1",
-  "description": "Space Team Colors",
+  "description": "lemon-candy Colors",
   "license": "ISC",
   "main": "hex.json",
   "files": [

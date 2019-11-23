@@ -1,7 +1,7 @@
 {
-  "name": "@space/icons",
+  "name": "@lemon/icons",
   "version": "0.0.1",
-  "description": "Space Team Icons",
+  "description": "lemon-candy Icons",
   "main": "index.js",
   "files": [
     "svgs",

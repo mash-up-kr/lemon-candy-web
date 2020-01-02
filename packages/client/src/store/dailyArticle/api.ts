@@ -19,7 +19,7 @@ export const saveDailyArticle = async (data: any) => {
       "emotion": 0,
       "time": dayjs().format(),
       "article": data.payload
-    }).then(result => console.log(result));
+    }).then((result: any) => console.log(result));
   } catch (e) {
     console.error(e);
   }

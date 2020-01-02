@@ -11,28 +11,20 @@ interface StyleProps {
 const S = {
   wrap: styled.div`
     padding: 23px 15px 0;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    flex-direction: row;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 14px;
   `,
   mask: styled.div<StyleProps>`
     background-color: ${(props) => props.color};
-    margin: 5.5px 3px;
-    max-width: 108px;
-    width: 108px;
-    height: 108px;
+    overflow: hidden;
     position: relative;
 
     &:before {
-      position: absolute;
-      bottom: 0;
-      content: '';
-      width: 100%;
-      height: 99px;
-      background-size: 100%; 
-      background-image: url(${BlueJelly});
+      content: "";
+      padding-bottom: 100%;
+      display: inline-block;
+      vertical-align: top;
     }
   `,
   numberLabel: styled.div`
@@ -43,9 +35,18 @@ const S = {
    letter-spacing: normal;
    text-align: center;
    color: #ffffff;
-   margin: 9px 6px;
+   position: absolute;
+   top: 8px;
+   left: 4px;
   `,
-
+  monster: styled.div`
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url(${BlueJelly});
+    background-size: 100% auto;
+    top: 28px;
+  `,
 };
 
 const MonthList = () => {
@@ -54,6 +55,31 @@ const MonthList = () => {
     <S.wrap>
       <S.mask color={ colors.black700 }>
         <S.numberLabel>1</S.numberLabel>
+        <S.monster></S.monster>
+      </S.mask>
+      <S.mask color={ colors.black700 }>
+        <S.numberLabel>1</S.numberLabel>
+        <S.monster></S.monster>
+      </S.mask>
+      <S.mask color={ colors.black700 }>
+        <S.numberLabel>1</S.numberLabel>
+        <S.monster></S.monster>
+      </S.mask>
+      <S.mask color={ colors.black700 }>
+        <S.numberLabel>1</S.numberLabel>
+        <S.monster></S.monster>
+      </S.mask>
+      <S.mask color={ colors.black700 }>
+        <S.numberLabel>1</S.numberLabel>
+        <S.monster></S.monster>
+      </S.mask>
+      <S.mask color={ colors.black700 }>
+        <S.numberLabel>1</S.numberLabel>
+        <S.monster></S.monster>
+      </S.mask>
+      <S.mask color={ colors.black700 }>
+        <S.numberLabel>1</S.numberLabel>
+        <S.monster></S.monster>
       </S.mask>
     </S.wrap>
   );

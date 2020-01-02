@@ -11,6 +11,9 @@ import { Provider } from 'react-redux'
 import { createStore, applyMiddleware, compose } from 'redux';
 import { rootReducer } from "./store/rootReducer";
 
+import dotenv from 'dotenv';
+
+dotenv.config();
 // redux configuration
 const sagaMiddleware = createSagaMiddleware();
 const composeEnhancers = (window as any).__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;

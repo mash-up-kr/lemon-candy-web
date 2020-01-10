@@ -8,17 +8,25 @@ export const getDailyArticle = async () => {
     console.error(e);
   }
 };
+const headers = {
+  'Content-Type': 'application/json',
+  'Authorization': 'JWT fefege...'
+}
+
 
 export const saveDailyArticle = async (data: any) => {
   try {
-    /**
-     * test dummy api call
-     */
     axios.post(`${process.env.REACT_APP_DOMAIN}/dailyArticle`, {
-      "userId": 29,
-      "emotion": 0,
-      "time": dayjs().format(),
-      "article": data.payload
+      headers: {
+        "accept": "*/*",
+        "Content-Type": "application/json",
+      },
+      data: {
+        "userId": 0,
+        "emotion": 0,
+        "time": "2020-01-09T13:38:00.104Z",
+        "article": "helloworld",
+      }
     }).then((result: any) => console.log(result));
   } catch (e) {
     console.error(e);

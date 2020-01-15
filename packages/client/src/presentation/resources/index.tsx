@@ -1,5 +1,1 @@
-const sample = () => {};
-
-export default {
-  sample,
-};
+export default {};

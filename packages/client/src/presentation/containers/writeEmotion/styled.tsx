@@ -5,7 +5,12 @@ export const StyledSwipeWrapper = styled.div`
 `;
 
 export const StyledContentWrapper = styled.div`
-  padding: 44px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-contents: center;
+  padding: 20px;
+
 `;
 
 /**
@@ -16,7 +21,7 @@ export const StyledDatePickerWrapper = styled.div`
     padding-bottom: 3px;
     border-bottom: 1px solid #fff;
     display: inline-block;
-
+    width: 160px;
     .date {
       font-size: 24px;
       font-weight: bold;
@@ -27,6 +32,9 @@ export const StyledDatePickerWrapper = styled.div`
     .date_picker {
       .SingleDatePickerInput__withBorder {
         border: none ;
+      }
+      .DateInput {
+        width: auto;
       }
       .DateInput_input {
         background-color: black !important;
@@ -44,7 +52,8 @@ export const StyledDatePickerWrapper = styled.div`
 `;
 
 export const StyledTextAreaWrapper = styled.div`
-  padding-top: 20px;
+  padding-top: 24px;
+  width: 100%;
   textarea {
     width: 100%;
     background: none;
@@ -53,5 +62,13 @@ export const StyledTextAreaWrapper = styled.div`
     color: #c7c7c7;
     outline: 0px;
     overflow-y: hidden;
+    border-radius: 8px;
+    background-color: #131415;
+    padding: 20px;
+    min-height: 260px;
   }
 `;
+
+export const Scenewrapper = styled.div`
+  // padding: 20px;
+`

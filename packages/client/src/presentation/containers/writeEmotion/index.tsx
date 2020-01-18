@@ -3,15 +3,15 @@ import moment from 'moment';
 import { useDispatch } from 'react-redux';
 import { DailyArticleActionTypes } from '@/store/dailyArticle/types';
 import { SingleDatePicker } from 'react-dates';
-import { StyledSwipeWrapper, StyledContentWrapper, StyledTextAreaWrapper, StyledDatePickerWrapper } from './styled';
+import { StyledSwipeWrapper, Scenewrapper, StyledContentWrapper, StyledTextAreaWrapper, StyledDatePickerWrapper } from './styled';
 import Swiper from 'react-id-swiper';
 import 'swiper/css/swiper.css';
 import 'react-dates/initialize';
 import 'moment/locale/ko'
 import 'react-dates/lib/css/_datepicker.css';
-import LottieComp, { LottieWrapper } from '@/presentation/components/LottieComp';
+import LottieComp, { LottieWrapper, LottieTitle } from '@/presentation/components/LottieComp';
 import happiness from '@lemon/icons/lottie/happiness.json';
-import { MONSTERS } from '@/presentation/resources/monster';
+import { _MONSTERS } from '@/presentation/resources/monster';
 
 function useLocaleInit() {
   useEffect(() => {
@@ -24,7 +24,6 @@ const DatePickerSection = () => {
   const [isFocus, setFocus] = useState(false);
   const onDateChangeHandler = useCallback((_date: any) => setDate(_date), []);
   const onFocusChangeHandler = useCallback(({ focused }) => setFocus(focused), []);
-  console.log(MONSTERS);
   return (
     <StyledDatePickerWrapper>
       <div className="content">
@@ -59,11 +58,12 @@ const SwiperSection = () => {
   return (
     <Swiper {...params}>
       {
-        MONSTERS.map((v, key) => {
+        _MONSTERS.map((v, key) => {
           return (
             <div key={key}>
               <LottieWrapper>
-                <LottieComp animationData={v} />
+                <LottieComp animationData={v.img} />
+                <LottieTitle>{v.title}</LottieTitle>
               </LottieWrapper>
             </div>
           )
@@ -84,7 +84,7 @@ const WriteEmotion = () => {
   }
 
   return (
-    <div>
+    <Scenewrapper>
       <StyledSwipeWrapper>
         <SwiperSection />
       </StyledSwipeWrapper>
@@ -93,8 +93,11 @@ const WriteEmotion = () => {
         <StyledTextAreaWrapper>
           <textarea placeholder="오늘 하루 어떠셨나요?" value={feeling} onChange={(e) => setFeeling(e.target.value)}></textarea>
         </StyledTextAreaWrapper>
+        {/* <button onClick={submitHandler}>
+          submit
+        </button> */}
       </StyledContentWrapper>
-    </div>
+    </Scenewrapper>
   );
 }
 

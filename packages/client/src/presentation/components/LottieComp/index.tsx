@@ -9,8 +9,17 @@ interface ILottieComp {
 }
 
 export const LottieWrapper = styled.div`
-
+  display: inline-block;
 `;
+
+export const LottieTitle = styled.div`
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+  margin-top: 11px;
+`
+
 
 const LottieComp = (props: ILottieComp) => {
   const [isStopped, setStopped] = useState(false);

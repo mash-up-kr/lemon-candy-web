@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import FloatingButton from '@/presentation/components/floatingButton';
 import Header from '@/presentation/components/header';
 import EmotionCalendar from '@/presentation/containers/emotionCalendar';
+import dayjs from 'dayjs';
 
 const say = (val: string) => () => console.log('say', val);
 
@@ -20,7 +21,7 @@ const currentS = {
 const MainView = () => (
   <div>
     <Header
-      title="2019"
+      title={ dayjs().format('YYYY') }
       leftSide="설정"
       rightSide="리마인드"
     />

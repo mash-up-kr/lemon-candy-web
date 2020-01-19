@@ -19,37 +19,44 @@ interface StyleProps {
 const S = {
   header: styled.div`
     width: 100%;
-    min-width: 53px;
+    height: 44px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 12px;
+    padding: 6px 15px;
   `,
   title: styled.h1<StyleProps>`
     display: flex;
+    flex: 1;
     justify-content: center;
     align-items: center;
     width: 33.3333333%;
     font-size: 1.5rem;
     font-weight: bold;
+    height: 2rem;
+    line-height: 2rem;
     color: ${(props) => props.color};
   `,
   leftSide: styled.p`
     display: flex;
+    flex: 1;
     justify-content: flex-start;
     align-items: center;
     width: 33.3333333%;
-    font-size: 1rem;
-    font-weight: bold;
+    font-size: 1.125rem;
+    height: 2rem;
+    line-height: 2rem;
     color: ${(props) => props.color};
   `,
   rightSide: styled.p`
     display: flex;
+    flex: 1;
     justify-content: flex-end;
     align-items: center;
     width: 33.3333333%;
-    font-size: 1rem;
-    font-weight: bold;
+    font-size: 1.125rem;
+    height: 2rem;
+    line-height: 2rem;
     color: ${(props) => props.color};
   `,
 };

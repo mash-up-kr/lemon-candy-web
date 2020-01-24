@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import Lottie from 'react-lottie';
-import ThumbsUp from '@lemon/icons/lottie/happiness.json';
 import styled from 'styled-components';
-import { AnimationItem } from 'lottie-web';
 
 interface ILottieComp {
   animationData: any;
@@ -24,14 +22,6 @@ export const LottieTitle = styled.div`
 const LottieComp = (props: ILottieComp) => {
   const [isStopped, setStopped] = useState(false);
   const [isPaused, setPaused] = useState(false);
-
-  const onStop = () => {
-		setStopped(!isStopped)
-	};
-
-	const onPause = () => {
-		setPaused(!isPaused)
-  };
   
   const defaultOptions = {
     animationData: props.animationData,   

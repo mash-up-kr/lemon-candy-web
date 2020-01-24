@@ -9,7 +9,8 @@
   "scripts": {
     "clean": "lerna clean --yes",
     "bootstrap": "lerna bootstrap",
-    "build": "npm run clean && npm run bootstrap && lerna exec npm run build"
+    "build": "npm run clean && npm run bootstrap && lerna exec npm run build",
+    "client:start": "cd packages/client && npm run start"
   },
   "dependencies": {
     "lerna": "3.19.0"

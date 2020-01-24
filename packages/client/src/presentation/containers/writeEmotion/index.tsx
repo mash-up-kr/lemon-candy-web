@@ -1,4 +1,4 @@
-import React, { useState, useCallback, useEffect, useRef } from 'react';
+import React, { useState, useCallback, useEffect } from 'react';
 import moment from 'moment';
 import { useDispatch } from 'react-redux';
 import { DailyArticleActionTypes } from '@/store/dailyArticle/types';
@@ -10,7 +10,6 @@ import 'react-dates/initialize';
 import 'moment/locale/ko'
 import 'react-dates/lib/css/_datepicker.css';
 import LottieComp, { LottieWrapper, LottieTitle } from '@/presentation/components/LottieComp';
-import happiness from '@lemon/icons/lottie/happiness.json';
 import { _MONSTERS } from '@/presentation/resources/monster';
 
 function useLocaleInit() {

@@ -6,6 +6,7 @@ import {
 import ErrorBoundary from '@/presentation/components/ErrorBoundary';
 import MainView from '@/presentation/views/main';
 import NotFound from '@/presentation/views/NotFound';
+import Loading from '@/presentation/components/Lodaing';
 
 const EntryRoute: React.FC = () => (
   <Router>

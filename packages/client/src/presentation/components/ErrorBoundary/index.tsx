@@ -1,6 +1,6 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 
-import ErrorView from '@/presentation/views/Error';
+import ErrorView from '@/presentation/components/Error';
 
 interface Props {
   children: ReactNode;

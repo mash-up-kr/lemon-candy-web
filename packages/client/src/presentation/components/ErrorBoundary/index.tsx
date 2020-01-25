@@ -7,32 +7,31 @@ interface Props {
 }
 
 interface State {
-  error: Error;
-  errorInfo: ErrorInfo;
+  readonly error?: Error | null | undefined;
 }
 
 class ErrorBoundary extends Component<Props, State> {
   // eslint-disable-next-line react/state-in-constructor
-  state = {
-    error: null as Error,
-    errorInfo: null as ErrorInfo,
+  readonly state: State = {
+    error: undefined,
   };
 
-  componentDidCatch(error: Error, errorInfo: ErrorInfo): void {
+  componentDidCatch(error: Error | null, errorInfo: ErrorInfo): void {
     this.setState(
-      { error, errorInfo },
-      () => { console.log(error); },
+      { error },
+      () => { console.log(errorInfo); },
     );
   }
 
   render() {
-    // eslint-disable-next-line react/destructuring-assignment
-    if (this.state.errorInfo) {
+    const { children } = this.props;
+    const { error } = this.state;
+
+    if (error) {
       return <ErrorView />;
     }
 
-    // eslint-disable-next-line react/destructuring-assignment
-    return this.props.children;
+    return children;
   }
 }
 

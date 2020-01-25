@@ -1,5 +1,5 @@
 import colors from '@lemon/colors';
-import { Oops } from '@lemon/icons';
+import Hum from '@lemon/icons/imgs/hum.png';
 import React from 'react';
 
 import S from './styles';
@@ -12,14 +12,11 @@ const Error: React.FC<Props> = ({
   onClick = () => { window.location.reload(); },
 }) => (
   <S.layout background={ colors.black1000 }>
-    <S.subTitle color={ colors.black0 }>
-      Oops..!
-    </S.subTitle>
-    <S.img src={ Oops } />
+    <S.img src={ Hum } />
     <S.contents color={ colors.black0 }>
-      일시적 오류가 발생했습니다.
+      끄응..
       <br />
-      다시 한번 시도해주세요.
+      이게 또 왜 이럴까..
     </S.contents>
     <S.button
       color={ colors.black1000 }

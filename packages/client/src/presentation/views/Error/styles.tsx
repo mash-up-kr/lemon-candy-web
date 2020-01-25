@@ -24,7 +24,7 @@ const S = {
   img: styled.img<StyleProps>`
     width: 100%;
     max-width: 152px;
-    margin: 48px 0;
+    margin: 0 0 48px;
   `,
   contents: styled.p<StyleProps>`
      font-size: 1rem;

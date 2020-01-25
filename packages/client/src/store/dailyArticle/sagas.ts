@@ -25,7 +25,7 @@ function* watchDailyArticle() {
   try {
     yield takeEvery(DailyArticleActionTypes.REQUEST_DAILY_ARTICLE, flowDailyArticle);
   } catch (e) {
-    
+
   }
 }
 
@@ -34,7 +34,7 @@ function* watchSaveDailyArticle() {
     yield takeEvery(DailyArticleActionTypes.REQUEST_SAVE_DAILY_ARTICLE, flowSaveDailyArticle);
   } catch (e) {
 
-  } 
+  }
 }
 
 export default [watchDailyArticle, watchSaveDailyArticle];

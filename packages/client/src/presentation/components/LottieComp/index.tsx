@@ -22,11 +22,11 @@ export const LottieTitle = styled.div`
 const LottieComp = (props: ILottieComp) => {
   const [isStopped, setStopped] = useState(false);
   const [isPaused, setPaused] = useState(false);
-  
+
   const defaultOptions = {
-    animationData: props.animationData,   
-    loop: true,        
-    autoplay: true,   
+    animationData: props.animationData,
+    loop: true,
+    autoplay: true,
     rendererSettings: {
     className: 'add-class', // svg에 적용
     preserveAspectRatio: 'xMidYMid slice'
@@ -34,7 +34,7 @@ const LottieComp = (props: ILottieComp) => {
   };
 
   return (
-      <Lottie 
+      <Lottie
         options={defaultOptions}
 				isStopped={isStopped}
 				isPaused={isPaused}

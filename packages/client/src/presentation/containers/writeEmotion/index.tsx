@@ -92,9 +92,9 @@ const WriteEmotion = () => {
         <StyledTextAreaWrapper>
           <textarea placeholder="오늘 하루 어떠셨나요?" value={feeling} onChange={(e) => setFeeling(e.target.value)}></textarea>
         </StyledTextAreaWrapper>
-        {/* <button onClick={submitHandler}>
+       <button onClick={submitHandler}>
           submit
-        </button> */}
+        </button>
       </StyledContentWrapper>
     </Scenewrapper>
   );

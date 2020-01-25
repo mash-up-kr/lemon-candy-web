@@ -55,31 +55,19 @@ const MonthList = () => {
     <S.wrap>
       <S.mask color={ colors.black700 }>
         <S.numberLabel>1</S.numberLabel>
-        <S.monster></S.monster>
+        <S.monster />
       </S.mask>
       <S.mask color={ colors.black700 }>
         <S.numberLabel>1</S.numberLabel>
-        <S.monster></S.monster>
+        <S.monster />
       </S.mask>
       <S.mask color={ colors.black700 }>
         <S.numberLabel>1</S.numberLabel>
-        <S.monster></S.monster>
+        <S.monster />
       </S.mask>
       <S.mask color={ colors.black700 }>
         <S.numberLabel>1</S.numberLabel>
-        <S.monster></S.monster>
-      </S.mask>
-      <S.mask color={ colors.black700 }>
-        <S.numberLabel>1</S.numberLabel>
-        <S.monster></S.monster>
-      </S.mask>
-      <S.mask color={ colors.black700 }>
-        <S.numberLabel>1</S.numberLabel>
-        <S.monster></S.monster>
-      </S.mask>
-      <S.mask color={ colors.black700 }>
-        <S.numberLabel>1</S.numberLabel>
-        <S.monster></S.monster>
+        <S.monster />
       </S.mask>
     </S.wrap>
   );

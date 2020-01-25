@@ -5,6 +5,9 @@ import styled from 'styled-components';
 
 import FloatingButton from '@/presentation/components/FloatingButton';
 import Header from '@/presentation/components/header';
+// eslint-disable-next-line import/no-extraneous-dependencies
+import { Redirect } from 'react-router';
+import { Link } from 'react-router-dom';
 
 const say = (val: string) => () => console.log('say', val);
 
@@ -29,8 +32,8 @@ const MainView = () => (
   <S.layout>
     <Header
       title={ dayjs().format('YYYY') }
-      leftSide="설정"
-      rightSide="리마인드"
+      leftSide={ <Link to="/setting">설정</Link> }
+      rightSide={ <Link to="/remind">리마인드</Link> }
     />
     <S.lottie
       src={ IMG_SAMPLE }

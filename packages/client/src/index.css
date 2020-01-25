@@ -71,3 +71,8 @@ body {
   background: #131415;
   overflow: hidden;
 }
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}

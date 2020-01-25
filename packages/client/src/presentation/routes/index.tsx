@@ -14,6 +14,8 @@ const EntryRoute: React.FC = () => (
         <Switch>
           <Route exact path="/" component={ MainView } />
           <Route exact path="/main" component={ MainView } />
+          <Route exact path="/setting" component={ MainView } />
+          <Route exact path="/remind" component={ MainView } />
           <Redirect to="/not-found" />
         </Switch>
       </div>

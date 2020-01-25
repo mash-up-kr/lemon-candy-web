@@ -1,7 +1,7 @@
 import colors from '@lemon/colors';
+import IMG_LOADING from '@lemon/icons/imgs/loading.png';
 import React from 'react';
 
-import IMG_LOADING from '@lemon/icons/imgs/loading.png';
 import S from './styles';
 
 const Loading: React.FC = () => (

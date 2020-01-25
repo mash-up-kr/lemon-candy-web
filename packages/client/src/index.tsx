@@ -2,14 +2,13 @@ import '@/index.css';
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import createSagaMiddleware from 'redux-saga'
+import { Provider } from 'react-redux';
+import { applyMiddleware, compose, createStore } from 'redux';
+import createSagaMiddleware from 'redux-saga';
 
 import EntryRoute from '@/presentation/routes';
-
-import rootSaga from "./store/rootSaga";
-import { Provider } from 'react-redux'
-import { createStore, applyMiddleware, compose } from 'redux';
-import { rootReducer } from "./store/rootReducer";
+import { rootReducer } from '@/store/rootReducer';
+import rootSaga from '@/store/rootSaga';
 
 // redux configuration
 const sagaMiddleware = createSagaMiddleware();
@@ -22,8 +21,8 @@ const store = createStore(
 sagaMiddleware.run(rootSaga);
 
 ReactDOM.render(
-  <Provider store={store}>
+  <Provider store={ store }>
     <EntryRoute />
   </Provider>,
-  document.getElementById('root')
+  document.getElementById('root'),
 );

@@ -1,4 +1,5 @@
 import IMG_SAMPLE from '@lemon/icons/imgs/sample.png';
+import dayjs from 'dayjs';
 import React from 'react';
 import styled from 'styled-components';
 
@@ -27,7 +28,7 @@ const S = {
 const MainView = () => (
   <S.layout>
     <Header
-      title="2019"
+      title={ dayjs().format('YYYY') }
       leftSide="설정"
       rightSide="리마인드"
     />

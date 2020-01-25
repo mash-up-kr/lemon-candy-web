@@ -1,12 +1,12 @@
 import colors from '@lemon/colors';
 import React from 'react';
 
-import Hum from '@lemon/icons/imgs/hum.png';
+import IMG_LOADING from '@lemon/icons/imgs/loading.png';
 import S from './styles';
 
 const Loading: React.FC = () => (
   <S.layout background={ colors.black1000 }>
-    <S.img src={ Hum } motion={ S.imgMotion } />
+    <S.img src={ IMG_LOADING } motion={ S.imgMotion } />
     <S.contents color={ colors.black0 }>
       끄응..
       <br />

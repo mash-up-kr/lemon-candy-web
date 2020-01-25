@@ -1,46 +1,7 @@
+import colors from '@lemon/colors';
 import React from 'react';
-import styled from 'styled-components';
 
-const S = {
-  layout: styled.section`
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: #000000;
-  `,
-  subTitle: styled.p`
-    font-size: 0.75rem;
-    opacity: 0.6;
-    color: #ffffff;
-    margin-bottom: 16px;
-  `,
-  title: styled.h1`
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #ffffff;
-    margin-bottom: 32px;
-  `,
-  contents: styled.p`
-     font-size: 1rem;
-     color: #ffffff;
-     line-height: 1.5;
-     text-align: center;
-  `,
-  button: styled.button`
-    margin-top: 60px;
-    width: 200px;
-    height: 40px;
-    line-height: 40px;
-    border-radius: 20px;
-    background: #ffffff;
-    color: #000000;
-    font-size: 0.75rem;
-    text-align: center;
-  `,
-};
+import S from './styles';
 
 const NotFound = () => {
   const ActionHistoryBack = () => {
@@ -50,19 +11,21 @@ const NotFound = () => {
 
   return (
     <div>
-      <S.layout>
-        <S.subTitle>
+      <S.layout background={ colors.black1000 }>
+        <S.subTitle color={ colors.black0 }>
           404 ERROR!
         </S.subTitle>
-        <S.title>
+        <S.title color={ colors.black0 }>
           길을 잃었다. 어딜 가야 할까...
         </S.title>
-        <S.contents>
+        <S.contents color={ colors.black0 }>
           요청하신 페이지를 찾을 수 없습니다.
           <br />
           입력하신 주소가 정확한지 다시 확인해 주세요.
         </S.contents>
         <S.button
+          color={ colors.black1000 }
+          background={ colors.black0 }
           onClick={ ActionHistoryBack }
         >
           뒤로가기

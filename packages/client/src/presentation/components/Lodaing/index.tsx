@@ -8,9 +8,9 @@ const Loading: React.FC = () => (
   <S.layout background={ colors.black1000 }>
     <S.img src={ IMG_LOADING } motion={ S.imgMotion } />
     <S.contents color={ colors.black0 }>
-      끄응..
+      열심히
       <br />
-      로딩 중...
+      로딩 중..!
     </S.contents>
   </S.layout>
 );

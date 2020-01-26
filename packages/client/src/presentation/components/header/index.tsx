@@ -32,8 +32,8 @@ const S = {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 33.3333333%;
-    font-size: 1.5rem;
+    width: 50%;
+    font-size: 1.25rem;
     font-weight: bold;
     color: ${(props) => props.color};
   `,
@@ -41,7 +41,7 @@ const S = {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    width: 33.3333333%;
+    width: 25%;
     font-size: 1rem;
     font-weight: bold;
     color: ${(props) => props.color};
@@ -50,7 +50,7 @@ const S = {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    width: 33.3333333%;
+    width: 25%;
     font-size: 1rem;
     font-weight: bold;
     color: ${(props) => props.color};

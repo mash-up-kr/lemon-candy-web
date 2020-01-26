@@ -33,7 +33,7 @@ const MainView = () => (
     <Header
       title={ dayjs().format('YYYY') }
       leftSide={ <Link to="/setting">설정</Link> }
-      rightSide={ <Link to="/remind">리마인드</Link> }
+      rightSide={ <Link to="/reminds">리마인드</Link> }
     />
     <S.lottie
       src={ IMG_SAMPLE }

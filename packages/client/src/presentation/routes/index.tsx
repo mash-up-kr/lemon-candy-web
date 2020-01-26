@@ -6,6 +6,7 @@ import {
 import ErrorBoundary from '@/presentation/components/ErrorBoundary';
 import MainView from '@/presentation/views/main';
 import NotFound from '@/presentation/views/NotFound';
+import RemindListView from '@/presentation/views/RemindList';
 
 const EntryRoute: React.FC = () => (
   <Router>
@@ -15,7 +16,7 @@ const EntryRoute: React.FC = () => (
           <Route exact path="/" component={ MainView } />
           <Route exact path="/main" component={ MainView } />
           <Route exact path="/setting" component={ MainView } />
-          <Route exact path="/remind" component={ MainView } />
+          <Route exact path="/reminds" component={ RemindListView } />
           <Redirect to="/not-found" />
         </Switch>
       </div>

@@ -17,13 +17,16 @@ interface StyleProps {
 }
 
 const S = {
-  header: styled.div`
+  header: styled.header`
     width: 100%;
     min-width: 53px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 12px;
+    position: fixed;
+    top: 0;
+    left: 0;
   `,
   title: styled.h1<StyleProps>`
     display: flex;

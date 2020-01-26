@@ -8,6 +8,7 @@ import Header from '@/presentation/components/header';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { Redirect } from 'react-router';
 import { Link } from 'react-router-dom';
+import MainContainer from '@/presentation/containers/Main';
 
 const say = (val: string) => () => console.log('say', val);
 
@@ -34,6 +35,9 @@ const MainView = () => (
       title={ dayjs().format('YYYY') }
       leftSide={ <Link to="/setting">설정</Link> }
       rightSide={ <Link to="/remind">리마인드</Link> }
+    />
+    <MainContainer
+      year={ dayjs().format('YYYY') }
     />
     <S.lottie
       src={ IMG_SAMPLE }

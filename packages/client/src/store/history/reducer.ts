@@ -10,11 +10,6 @@ export interface HistoryState {
   requestState: HttpStatusCode;
 }
 
-const MOCK_DATA = {
-  remind: false,
-  year: [],
-};
-
 const initState: HistoryState = {
   data: null as any,
   requestState: HttpStatusCode.LOADING,
@@ -25,7 +20,7 @@ export default function historyReducer(state = initState, action: any) {
     switch (action.type) {
       case historyAction.SUCCESS:
         return {
-          data: MOCK_DATA,
+          data: draft.data,
           requestState: HttpStatusCode.OK,
         };
       case historyAction.FAILURE:

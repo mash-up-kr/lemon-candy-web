@@ -8,7 +8,7 @@ export enum HttpStatusCode {
   NOT_FOUND = 404
 }
 
-export const ACTION_TYPES = {
-  HISTORY: 'history',
-  PING: 'ping',
-};
+export enum ACTION_TYPES {
+  HISTORY = 'HISTORY',
+  PING = 'PING',
+}

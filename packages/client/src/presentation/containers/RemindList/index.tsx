@@ -49,7 +49,7 @@ const RemindListContainer: React.FC = () => {
 
   useEffect(() => {
     const randomState = (Math.floor((Math.random() * 10) % 2)) ? 200 : 500;
-    setTimeout(() => { setState(200); }, 0);
+    setTimeout(() => { setState(randomState); }, 1500);
   }, []);
 
   const renderFetchView = () => (

@@ -3,6 +3,7 @@ import {
 } from 'redux-saga/effects';
 
 import PingSaga from '@/store/ping/sagas';
+import DailyArticleSaga from '@/store/dailyArticle/sagas';
 
 const makeRestartable = (saga: any) => function* () {
   yield spawn(function* () {
@@ -18,7 +19,7 @@ const makeRestartable = (saga: any) => function* () {
   });
 };
 
-const sagas = [...PingSaga].map(makeRestartable);
+const sagas = [...PingSaga, ...DailyArticleSaga].map(makeRestartable);
 
 export default function* rootSaga() {
   yield all(sagas.map((saga) => call(saga)));

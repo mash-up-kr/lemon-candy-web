@@ -10,6 +10,9 @@ import EntryRoute from '@/presentation/routes';
 import { rootReducer } from '@/store/rootReducer';
 import rootSaga from '@/store/rootSaga';
 
+import dotenv from 'dotenv';
+
+dotenv.config();
 // redux configuration
 const sagaMiddleware = createSagaMiddleware();
 const composeEnhancers = (window as any).__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;

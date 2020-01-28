@@ -1,16 +1,17 @@
 import styled from 'styled-components';
 
 export const StyledSwipeWrapper = styled.div`
-  height: 300px;
+  /* height: 300px; */
+  .swiper-container {
+  }
 `;
 
 export const StyledContentWrapper = styled.div`
+  margin-top: 38px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-contents: center;
-  padding: 20px;
-
 `;
 
 /**
@@ -21,38 +22,29 @@ export const StyledDatePickerWrapper = styled.div`
     padding-bottom: 3px;
     border-bottom: 1px solid #fff;
     display: inline-block;
-    width: 160px;
-    .date {
-      font-size: 24px;
-      font-weight: bold;
-      color: #fff;
-      position: relative; 
-    }
 
     .date_picker {
-      .SingleDatePickerInput__withBorder {
-        border: none ;
+      position: relative;
+      .date {
+        font-size: 24px;
+        font-weight: bold;
+        color: #fff;
+        position: relative; 
       }
-      .DateInput {
-        width: auto;
-      }
-      .DateInput_input {
-        background-color: black !important;
-        padding: 0;
-        font-size: 24px !important;
-        font-weight: bold !important;
-        color: white !important;
-        border: none !important;
-      }
-      .DateInput_input__focused {
-        border-bottom: 2px solid black;
+      input[type="date"] {
+        position: absolute;
+        opacity: 0;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
       }
     }
   }
 `;
 
 export const StyledTextAreaWrapper = styled.div`
-  padding-top: 24px;
+  padding: 24px;
   width: 100%;
   textarea {
     width: 100%;
@@ -70,5 +62,5 @@ export const StyledTextAreaWrapper = styled.div`
 `;
 
 export const Scenewrapper = styled.div`
-  // padding: 20px;
-`
+  padding-top: 53px;
+`;

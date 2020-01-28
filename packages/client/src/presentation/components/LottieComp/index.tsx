@@ -1,13 +1,15 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Lottie from 'react-lottie';
 import styled from 'styled-components';
 
 interface ILottieComp {
   animationData: any;
+  isActive?: boolean;
 }
 
 export const LottieWrapper = styled.div`
   display: inline-block;
+  margin-left: -35px;
 `;
 
 export const LottieTitle = styled.div`
@@ -20,13 +22,11 @@ export const LottieTitle = styled.div`
 
 
 const LottieComp = (props: ILottieComp) => {
-  const [isStopped, setStopped] = useState(false);
-  const [isPaused, setPaused] = useState(false);
+  const { isActive } = props;
 
   const defaultOptions = {
     animationData: props.animationData,
     loop: true,
-    autoplay: true,
     rendererSettings: {
     className: 'add-class', // svg에 적용
     preserveAspectRatio: 'xMidYMid slice'
@@ -36,9 +36,8 @@ const LottieComp = (props: ILottieComp) => {
   return (
       <Lottie
         options={defaultOptions}
-				isStopped={isStopped}
-				isPaused={isPaused}
-        isClickToPauseDisabled={false}
+        isStopped={!isActive}
+        isClickToPauseDisabled={true}
         width={200}
         height={200}
 				eventListeners={[

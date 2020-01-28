@@ -20,43 +20,51 @@ export enum EMonsters {
 
 export const _MONSTERS = [
   {
-    type: EMonsters.HAPPINESS,
-    img: HAPPINESS,
-    title: '행복해요',
-  },
-  {
-    type: EMonsters.DEPRESSED,
-    img: DEPRESSED,
-    title: '우울해요',
-  },
-  {
-    type: EMonsters.ANGRO,
-    img: ANGRO,
-    title: '분노해요',
-  },
-  {
     type: EMonsters.PLEASURE,
     img: PLEASURE,
     title: '기뻐요',
+    id: 0,
   },
   {
-    type: EMonsters.SADNESS,
-    img: SADNESS,
-    title: '슬퍼요',
-  },
-  {
-    type: EMonsters.SATISFACTION,
-    img: SATISFACTION,
-    title: '만족해요',
-  },
-  {
-    type: EMonsters.TIRED,
-    img: TIRED,
-    title: '힘들어요',
+    type: EMonsters.HAPPINESS,
+    img: HAPPINESS,
+    title: '행복해요',
+    id: 1
   },
   {
     type: EMonsters.TRANGUILITY,
     img: TRANGUILITY,
     title: '평온해요',
-  }
+    id: 2,
+  },
+  {
+    type: EMonsters.SATISFACTION,
+    img: SATISFACTION,
+    title: '만족해요',
+    id: 3,
+  },
+  {
+    type: EMonsters.ANGRO,
+    img: ANGRO,
+    title: '분노해요',
+    id: 4,
+  },
+  {
+    type: EMonsters.DEPRESSED,
+    img: DEPRESSED,
+    title: '우울해요',
+    id: 5,
+  },
+  {
+    type: EMonsters.TIRED,
+    img: TIRED,
+    title: '힘들어요',
+    id: 6,
+  },
+  {
+    type: EMonsters.SADNESS,
+    img: SADNESS,
+    title: '슬퍼요',
+    id: 7,
+  },
 ]

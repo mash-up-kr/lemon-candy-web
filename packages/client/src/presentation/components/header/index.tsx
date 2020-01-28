@@ -37,7 +37,7 @@ const S = {
     font-weight: bold;
     color: ${(props) => props.color};
   `,
-  leftSide: styled.p`
+  leftSide: styled.div`
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -46,7 +46,7 @@ const S = {
     font-weight: bold;
     color: ${(props) => props.color};
   `,
-  rightSide: styled.p`
+  rightSide: styled.div`
     display: flex;
     justify-content: flex-end;
     align-items: center;

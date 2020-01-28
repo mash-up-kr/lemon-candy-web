@@ -17,6 +17,7 @@ const EntryRoute: React.FC = () => (
           <Route exact path="/main" component={ MainView } />
           <Route exact path="/setting" component={ MainView } />
           <Route exact path="/remind" component={ MainView } />
+          <Route exact path="/write" component={ WriteEmotion } />
           <Redirect to="/not-found" />
         </Switch>
       </div>

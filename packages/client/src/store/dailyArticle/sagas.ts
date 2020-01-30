@@ -12,10 +12,15 @@ function* flowDailyArticle() {
   }
 }
 
-function* flowSaveDailyArticle(data: any) {
+function* flowSaveDailyArticle(actions: any) {
   try {
-    const SaveDailyArticle = yield call(saveDailyArticle, data);
-    console.log(SaveDailyArticle);
+    const { payload } = actions;
+    const { status } = yield call(saveDailyArticle, payload);
+    if (status !== 200) {
+      alert('error');
+    }
+    yield call(alert, '작성이 완료되었습니다.');
+    yield put(DailyArticleActions.successSaveDailyArticle());
   } catch (e) {
 
   }

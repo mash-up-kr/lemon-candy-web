@@ -55,7 +55,6 @@ const S = {
       padding: 20px;
       width: 100%;
       height: 100%;
-      word-break: keep-all;
       font-size: 0.875rem;
       color: ${(props) => props.color}
       background: ${(props) => props.background}
@@ -63,7 +62,7 @@ const S = {
       border: 0;
       resize: none;
     }
-    
+
     textarea:focus {
       outline: none;
     }

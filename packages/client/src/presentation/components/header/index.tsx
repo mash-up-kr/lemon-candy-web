@@ -19,6 +19,7 @@ interface StyleProps {
 
 const S = {
   header: styled.header<StyleProps>`
+    z-index: 999;
     width: 100%;
     min-width: 53px;
     display: flex;

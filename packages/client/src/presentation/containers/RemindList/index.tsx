@@ -5,44 +5,7 @@ import Loading from '@/presentation/components/Lodaing';
 import RemindListLayout from '@/presentation/containers/RemindList/ListLayout';
 
 import S from './styles';
-
-const MOCK_DATA = {
-  reminds: [
-    {
-      bestEmotion: 0,
-      command: '진짜 시간 빠르다..',
-      endDate: '2019-11-10',
-      remindId: 1,
-      startDate: '2019-11-04',
-      title: '이제 곧 올해도 끝',
-    },
-    {
-      bestEmotion: 0,
-      command: '진짜 시간 빠르다..',
-      endDate: '2019-12-08',
-      remindId: 2,
-      startDate: '2019-12-02',
-      title: '이제 곧 올해도 끝',
-    },
-    {
-      bestEmotion: 0,
-      command: '오늘도 화이팅',
-      endDate: '2020-01-12',
-      remindId: 3,
-      startDate: '2020-01-06',
-      title: '안녕',
-    },
-    {
-      bestEmotion: 0,
-      command: null,
-      endDate: '2020-01-19',
-      remindId: 4,
-      startDate: '2020-01-13',
-      title: null,
-    },
-  ],
-  empty_reminds: [],
-};
+import { MOCK_DATA } from '@/config';
 
 const RemindListContainer: React.FC = () => {
   const [state, setState] = useState(0);

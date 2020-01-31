@@ -43,7 +43,6 @@ const RemindListLayout: React.FC<Props> = ({
         );
         year = currentYear;
         month = currentMonth;
-        console.log('ttt', component);
 
         return component;
       })

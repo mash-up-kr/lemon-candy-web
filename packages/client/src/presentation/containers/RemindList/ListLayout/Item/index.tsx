@@ -15,43 +15,43 @@ const COLOR_SET = [
   Colors.angro,
   Colors.happiness,
   Colors.sadness,
-]
+];
 
 const RemindItem: React.FC<Props> = ({
   remind
 }) => (
-  <Link to={ `/reminds/${remind.remindId}` }>
-    {
-      remind.command ? (
-        <S.layout background={ Colors.black900 }>
-          <S.contents color={ Colors.black100 }>
-            {remind.command}
-          </S.contents>
-          <S.footer>
-            <S.date color={Colors.black300}>
-              {dayjs(remind.startDate).format('MM.DD')}
-              -
-              {dayjs(remind.endDate).format('MM.DD')}
-            </S.date>
-            <S.dot background={COLOR_SET[remind.bestEmotion]}/>
-          </S.footer>
-        </S.layout>
-      ) : (
-        <S.emptyLayout>
-          <S.contents color={Colors.black100}>
-            리마인드를 해주세요 :)
-          </S.contents>
-          <S.footer>
-            <S.date color={Colors.black300}>
-              {dayjs(remind.startDate).format('MM.DD')}
-              -
-              {dayjs(remind.endDate).format('MM.DD')}
-            </S.date>
-          </S.footer>
-        </S.emptyLayout>
-      )
-    }
-  </Link>
+  remind.command ? (
+    <Link to={ `/reminds/${remind.remindId}` }>
+      <S.layout background={ Colors.black900 }>
+        <S.contents color={ Colors.black100 }>
+          {remind.command}
+        </S.contents>
+        <S.footer>
+          <S.date color={Colors.black300}>
+            {dayjs(remind.startDate).format('MM.DD')}
+            -
+            {dayjs(remind.endDate).format('MM.DD')}
+          </S.date>
+          <S.dot background={COLOR_SET[remind.bestEmotion]}/>
+        </S.footer>
+      </S.layout>
+    </Link>
+  ) : (
+    <Link to={ `/reminds/${remind.remindId}/write` }>
+      <S.emptyLayout>
+        <S.contents color={Colors.black100}>
+          리마인드를 해주세요 :)
+        </S.contents>
+        <S.footer>
+          <S.date color={Colors.black300}>
+            {dayjs(remind.startDate).format('MM.DD')}
+            -
+            {dayjs(remind.endDate).format('MM.DD')}
+          </S.date>
+        </S.footer>
+      </S.emptyLayout>
+    </Link>
+  )
 );
 
 export default RemindItem;

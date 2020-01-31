@@ -4,10 +4,10 @@ import { useHistory } from 'react-router-dom';
 import { MOCK_DATA } from '@/config';
 import Error from '@/presentation/components/Error';
 import Loading from '@/presentation/components/Lodaing';
-import RemindDetailLayout from '@/presentation/containers/RemindDetail/Layout';
 import { REMIND } from '@/presentation/containers/RemindList/ListLayout';
 
 import S from './styles';
+import RemindWriteLayout from '@/presentation/containers/RemindWrite/Layout';
 
 interface Props {
   remindId: string;
@@ -30,7 +30,7 @@ export interface REMIND_DETAIL {
 }
 
 
-const RemindDetailContainer: React.FC<Props> = ({ remindId }: Props) => {
+const RemindWriteContainer: React.FC<Props> = ({ remindId }: Props) => {
   const history = useHistory();
   const [state, setState] = useState(0);
   const [detail, setDetail] = useState();
@@ -60,12 +60,6 @@ const RemindDetailContainer: React.FC<Props> = ({ remindId }: Props) => {
 
       return;
     }
-    if (!data.command) {
-      // eslint-disable-next-line no-restricted-globals
-      history.push(`/reminds/${data.remindId}/write`);
-
-      return;
-    }
 
     // eslint-disable-next-line radix
     const currentDetail = getRemindDetail(parseInt(remindId));
@@ -77,7 +71,7 @@ const RemindDetailContainer: React.FC<Props> = ({ remindId }: Props) => {
     state === 0
       ? <Loading />
       : state === 200
-        ? <RemindDetailLayout detail={ detail } />
+        ? <RemindWriteLayout detail={ detail } />
         : <Error />
   );
 
@@ -88,4 +82,4 @@ const RemindDetailContainer: React.FC<Props> = ({ remindId }: Props) => {
   );
 };
 
-export default RemindDetailContainer;
+export default RemindWriteContainer;

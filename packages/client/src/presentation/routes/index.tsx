@@ -8,6 +8,7 @@ import MainView from '@/presentation/views/main';
 import NotFound from '@/presentation/views/NotFound';
 import RemindDetailView from '@/presentation/views/RemindDetail';
 import RemindListView from '@/presentation/views/RemindList';
+import RemindWriteView from '@/presentation/views/RemindWrite';
 import WriteEmotion from '@/presentation/views/WriteEmotion';
 
 const EntryRoute: React.FC = () => (
@@ -20,6 +21,7 @@ const EntryRoute: React.FC = () => (
           <Route exact path="/setting" component={ MainView } />
           <Route exact path="/reminds" component={ RemindListView } />
           <Route exact path="/reminds/:remindId" component={ RemindDetailView } />
+          <Route exact path="/reminds/:remindId/write" component={ RemindWriteView } />
           <Route exact path="/write" component={ WriteEmotion } />
           <Redirect to="/not-found" />
         </Switch>

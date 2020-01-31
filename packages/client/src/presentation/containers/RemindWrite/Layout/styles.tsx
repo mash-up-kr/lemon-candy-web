@@ -63,6 +63,10 @@ const S = {
       border: 0;
       resize: none;
     }
+    
+    textarea:focus {
+      outline: none;
+    }
   `,
 };
 

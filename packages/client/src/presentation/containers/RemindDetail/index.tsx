@@ -5,6 +5,7 @@ import Loading from '@/presentation/components/Lodaing';
 import Error from '@/presentation/components/Error';
 import { REMIND } from '@/presentation/containers/RemindList/ListLayout';
 import { MOCK_DATA } from '@/config';
+import RemindDetailLayout from '@/presentation/containers/RemindDetail/Layout';
 
 interface Props {
   remindId: string;
@@ -73,7 +74,7 @@ const RemindDetailContainer: React.FC<Props> = ({ remindId }: Props) => {
     state === 0
       ? <Loading />
       : state === 200
-        ? <div>{ remindId }</div>
+        ? <RemindDetailLayout detail={ detail } />
         : <Error />
   );
 

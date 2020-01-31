@@ -24,12 +24,6 @@ const RemindListContainer: React.FC = () => {
         : <Error />
   );
 
-  const renderContentsView = () => (
-    <div>
-      안녕하세요
-    </div>
-  )
-
   return (
     <S.layout>
       { renderFetchView() }

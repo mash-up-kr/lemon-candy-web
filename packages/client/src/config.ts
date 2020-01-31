@@ -1,7 +1,7 @@
 export const MOCK_DATA = {
   reminds: [
     {
-      bestEmotion: 0,
+      bestEmotion: 2,
       command: '진짜 시간 빠르다..',
       endDate: '2019-11-10',
       remindId: 1,
@@ -9,7 +9,7 @@ export const MOCK_DATA = {
       title: '이제 곧 올해도 끝',
     },
     {
-      bestEmotion: 0,
+      bestEmotion: 2,
       command: '진짜 시간 빠르다..',
       endDate: '2019-12-08',
       remindId: 2,
@@ -17,7 +17,7 @@ export const MOCK_DATA = {
       title: '이제 곧 올해도 끝',
     },
     {
-      bestEmotion: 0,
+      bestEmotion: 1,
       command: '오늘도 화이팅',
       endDate: '2020-01-12',
       remindId: 3,

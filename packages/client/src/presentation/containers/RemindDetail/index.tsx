@@ -40,7 +40,7 @@ const RemindDetailContainer: React.FC<Props> = ({ remindId }: Props) => {
   const isNumber = (value: string): boolean => parseInt(value) === parseInt(value);
   // eslint-disable-next-line radix
   const getReminds = (id: string): REMIND | undefined => MOCK_DATA.reminds.find((item) => item.remindId === parseInt(id));
-  const getRemindDetail = (id: number) => MOCK_DATA.remind_detail[id];
+  const getRemindDetail = (id: number) => MOCK_DATA.remind_detail[id - 1];
 
 
   const fetch = () => {

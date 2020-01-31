@@ -11,6 +11,12 @@ interface Props {
   remind: REMIND;
 }
 
+const COLOR_SET = [
+  Colors.angro,
+  Colors.happiness,
+  Colors.sadness,
+]
+
 const RemindItem: React.FC<Props> = ({
   remind
 }) => (
@@ -27,7 +33,7 @@ const RemindItem: React.FC<Props> = ({
               -
               {dayjs(remind.endDate).format('MM.DD')}
             </S.date>
-            <S.dot background={Colors.angro}/>
+            <S.dot background={COLOR_SET[remind.bestEmotion]}/>
           </S.footer>
         </S.layout>
       ) : (

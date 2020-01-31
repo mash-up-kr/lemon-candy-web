@@ -10,10 +10,26 @@ interface Props {
   remindId: string;
 }
 
+// eslint-disable-next-line @typescript-eslint/class-name-casing
+export interface EMOTION_RANK {
+  count: number;
+  emotion: number;
+}
+
+// eslint-disable-next-line @typescript-eslint/class-name-casing
+export interface REMIND_DETAIL {
+  emotionRank: EMOTION_RANK[];
+  command?: string;
+  endDate: string;
+  remindId: number;
+  startDate: string;
+  title?: string;
+}
+
 
 const RemindDetailContainer: React.FC<Props> = ({ remindId }: Props) => {
   const [state, setState] = useState(0);
-  const [detail, setDetail] = useState(null);
+  const [detail, setDetail] = useState();
 
   useEffect(() => {
     setTimeout(() => { fetch(); }, 500);

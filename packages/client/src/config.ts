@@ -34,4 +34,5 @@ export const MOCK_DATA = {
     },
   ],
   empty_reminds: [],
+  remind_detail: [],
 };

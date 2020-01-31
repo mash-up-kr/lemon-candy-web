@@ -7,6 +7,7 @@ import ErrorBoundary from '@/presentation/components/ErrorBoundary';
 import MainView from '@/presentation/views/main';
 import NotFound from '@/presentation/views/NotFound';
 import WriteEmotion from '@/presentation/views/WriteEmotion';
+import LoginView from '@/presentation/views/login';
 
 const EntryRoute: React.FC = () => (
   <Router>
@@ -18,6 +19,7 @@ const EntryRoute: React.FC = () => (
           <Route exact path="/setting" component={ MainView } />
           <Route exact path="/remind" component={ MainView } />
           <Route exact path="/write" component={ WriteEmotion } />
+          <Route exact path="/login" component= { LoginView } />
           <Redirect to="/not-found" />
         </Switch>
       </div>

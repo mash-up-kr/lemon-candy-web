@@ -1,8 +1,8 @@
 import React from 'react';
-import styled from 'styled-components';
 import {
   RouteComponentProps,
 } from 'react-router-dom';
+import styled from 'styled-components';
 
 import Header from '@/presentation/components/header';
 import RemindDetailContainer from '@/presentation/containers/RemindDetail';
@@ -16,17 +16,25 @@ const S = {
   `,
 };
 
-const RemindDetail: React.FC<RouteComponentProps> = ({ match }) => (
-  <S.layout>
-    <Header
-      title="리마인드"
-      leftSide="<"
-      /* eslint-disable-next-line no-restricted-globals */
-      leftSideOnClick={ () => { history.back(); } }
-    />
-    {/* eslint-disable-next-line react/prop-types */}
-    <RemindDetailContainer remindId={ match.params.remindId } />
-  </S.layout>
-);
+interface Props {
+  remindId?: string | undefined;
+}
+
+const RemindDetail: React.FC<RouteComponentProps<Props>> = ({ match }) => {
+  // eslint-disable-next-line react/prop-types
+  const remindId = match.params.remindId ? match.params.remindId : '';
+
+  return (
+    <S.layout>
+      <Header
+        title="리마인드"
+        leftSide="<"
+        /* eslint-disable-next-line no-restricted-globals */
+        leftSideOnClick={ () => { history.back(); } }
+      />
+      <RemindDetailContainer remindId={ remindId } />
+    </S.layout>
+  );
+}
 
 export default RemindDetail;

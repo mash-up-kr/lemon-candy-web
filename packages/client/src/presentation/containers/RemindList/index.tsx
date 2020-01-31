@@ -11,8 +11,8 @@ const RemindListContainer: React.FC = () => {
   const [state, setState] = useState(0);
 
   useEffect(() => {
-    const randomState = (Math.floor((Math.random() * 10) % 2)) ? 200 : 500;
-    setTimeout(() => { setState(randomState); }, 1500);
+    const randomState = (Math.floor((Math.random() * 10)) > 1) ? 200 : 500;
+    setTimeout(() => { setState(randomState); }, 1000);
   }, []);
 
   const renderFetchView = () => (

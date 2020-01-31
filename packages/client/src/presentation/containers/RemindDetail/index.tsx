@@ -10,7 +10,7 @@ interface Props {
 const RemindDetailContainer: React.FC<Props> = ({ remindId }) => {
   return (
     <S.layout>
-      안녕하세요 {remindId}
+      안녕하세요 { remindId }
     </S.layout>
   );
 };

@@ -6,9 +6,9 @@ import {
 import ErrorBoundary from '@/presentation/components/ErrorBoundary';
 import MainView from '@/presentation/views/main';
 import NotFound from '@/presentation/views/NotFound';
-import WriteEmotion from '@/presentation/views/WriteEmotion';
-import RemindListView from '@/presentation/views/RemindList';
 import RemindDetailView from '@/presentation/views/RemindDetail';
+import RemindListView from '@/presentation/views/RemindList';
+import WriteEmotion from '@/presentation/views/WriteEmotion';
 
 const EntryRoute: React.FC = () => (
   <Router>

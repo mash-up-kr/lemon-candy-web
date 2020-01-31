@@ -61,14 +61,14 @@ body {
   justify-content: center;
   align-items: flex-start;
   line-height: normal;
-  background: black;
+  background: #131415;
 }
 
 #root {
   width: 100%;
   max-width: 600px;
   min-height: 100vh;
-  background: black;
+  background: #131415;
   overflow: hidden;
 }
 

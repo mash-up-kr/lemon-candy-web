@@ -12,6 +12,7 @@ import RemindWriteView from '@/presentation/views/RemindWrite';
 import WriteEmotion from '@/presentation/views/WriteEmotion';
 import LoginView from '@/presentation/views/login';
 import PrivateRoute from '@/presentation/containers/PrivateRoute';
+import SettingView from '@/presentation/views/Setting';
 
 const EntryRoute: React.FC = () => (
   <Router>
@@ -20,7 +21,7 @@ const EntryRoute: React.FC = () => (
         <Switch>
           <PrivateRoute exact path="/" component={ MainView } />
           <PrivateRoute exact path="/main" component={ MainView } />
-          <PrivateRoute exact path="/setting" component={ MainView } />
+          <PrivateRoute exact path="/setting" component={ SettingView } />
           <PrivateRoute exact path="/reminds" component={ RemindListView } />
           <PrivateRoute exact path="/reminds/:remindId" component={ RemindDetailView } />
           <PrivateRoute exact path="/reminds/:remindId/write" component={ RemindWriteView } />

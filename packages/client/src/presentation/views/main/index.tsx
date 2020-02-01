@@ -39,8 +39,7 @@ const MainView = () => {
     <S.layout>
       <Header
         title={ dayjs().format('YYYY') }
-        leftSide="로그아웃"
-        leftSideOnClick={ actionLogout }
+        leftSide={ <Link to="/setting">설정</Link> }
         rightSide={ <Link to="/reminds">리마인드</Link> }
       />
       <S.lottieLayout>

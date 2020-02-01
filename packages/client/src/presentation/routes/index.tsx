@@ -11,19 +11,20 @@ import RemindListView from '@/presentation/views/RemindList';
 import RemindWriteView from '@/presentation/views/RemindWrite';
 import WriteEmotion from '@/presentation/views/WriteEmotion';
 import LoginView from '@/presentation/views/login';
+import PrivateRoute from '@/presentation/containers/PrivateRoute';
 
 const EntryRoute: React.FC = () => (
   <Router>
     <ErrorBoundary>
       <div className="App">
         <Switch>
-          <Route exact path="/" component={ MainView } />
-          <Route exact path="/main" component={ MainView } />
-          <Route exact path="/setting" component={ MainView } />
-          <Route exact path="/reminds" component={ RemindListView } />
-          <Route exact path="/reminds/:remindId" component={ RemindDetailView } />
-          <Route exact path="/reminds/:remindId/write" component={ RemindWriteView } />
-          <Route exact path="/write" component={ WriteEmotion } />
+          <PrivateRoute exact path="/" component={ MainView } />
+          <PrivateRoute exact path="/main" component={ MainView } />
+          <PrivateRoute exact path="/setting" component={ MainView } />
+          <PrivateRoute exact path="/reminds" component={ RemindListView } />
+          <PrivateRoute exact path="/reminds/:remindId" component={ RemindDetailView } />
+          <PrivateRoute exact path="/reminds/:remindId/write" component={ RemindWriteView } />
+          <PrivateRoute exact path="/write" component={ WriteEmotion } />
           <Route exact path="/login" component={ LoginView } />
           <Redirect to="/not-found" />
         </Switch>

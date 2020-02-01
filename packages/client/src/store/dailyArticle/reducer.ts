@@ -2,10 +2,13 @@ import produce from 'immer';
 
 import { DailyArticleActionTypes } from '@/store/dailyArticle/types';
 
-const initialState = {};
+const initialState = {
+  currentArticle: {}
+};
 
 const successDailyArticle = (state: any, draft: any) => {
-  console.log('successDailyArticle');
+  console.log(state);
+  draft.currentArticle = state.payload
 };
 
 export default function dailyArticleReducer(state = initialState, action: any) {

@@ -1,4 +1,6 @@
 import axios from 'axios';
+import qs from 'querystring';
+import dayjs from 'dayjs';
 
 const headers = {
   'Content-Type': 'application/json',
@@ -7,18 +9,30 @@ const headers = {
   TimeZone: 'Asia/Seoul',
 };
 
-export const getDailyArticle = async () => {
+export const editDailyArticle = async (actions: any) => {
+  const { date } = actions;
   try {
-    console.log('hellowrold');
+    const res = await axios.put(`${process.env.REACT_APP_DOMAIN}/dailyArticle`, {  ...actions }, { headers });
+    return res;
+  } catch (e) {
+    console.error(e);
+  }
+}
+
+export const getDailyArticle = async (payload: any) => {
+  try {
+    const data = qs.stringify(payload);
+    const res = await axios.get(`${process.env.REACT_APP_DOMAIN}/dailyArticle?${data}`, { headers })
+    return res;
   } catch (e) {
     console.error(e);
   }
 };
 
 export const saveDailyArticle = async (actions: any) => {
-  const { date } = actions;
+  const { emotion, time, article } = actions;
   try {
-    const res = await axios.post(`${process.env.REACT_APP_DOMAIN}/dailyArticle`, {  ...actions, time: date }, { headers });
+    const res = await axios.post(`${process.env.REACT_APP_DOMAIN}/dailyArticle`, {  emotion, article, time }, { headers });
     return res;
   } catch (e) {
     console.error(e);

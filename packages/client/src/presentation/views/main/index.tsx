@@ -4,6 +4,7 @@ import React from 'react';
 import {
   Link,
   RouteComponentProps,
+  useHistory,
 } from 'react-router-dom';
 import styled from 'styled-components';
 
@@ -28,18 +29,26 @@ const S = {
   `,
 };
 
-const MainView = ({ history }: RouteComponentProps<any>) => (
-  <S.layout>
-    <Header
-      title={ dayjs().format('YYYY') }
-      leftSide={ <Link to="/setting">설정</Link> }
-      rightSide={ <Link to="/reminds">리마인드</Link> }
-    />
-    <S.lottieLayout>
-      <LottieComp animationData={ LOTTIE_SAMPLE } isActive width="100%" height="100%" />
-    </S.lottieLayout>
-    <FloatingButton onClick={ () => { history.push('/write'); } } />
-  </S.layout>
-);
+const MainView = () => {
+  const history = useHistory();
+  const actionLogout = () => {
+    localStorage.removeItem('MONNDAY_TOKEN');
+    history.push('/login');
+  }
+  return (
+    <S.layout>
+      <Header
+        title={ dayjs().format('YYYY') }
+        leftSide="로그아웃"
+        leftSideOnClick={ actionLogout }
+        rightSide={ <Link to="/reminds">리마인드</Link> }
+      />
+      <S.lottieLayout>
+        <LottieComp animationData={ LOTTIE_SAMPLE } isActive width="100%" height="100%" />
+      </S.lottieLayout>
+      <FloatingButton onClick={ () => { history.push('/write'); } } />
+    </S.layout>
+  );
+}
 
 export default MainView;

@@ -24,7 +24,7 @@ const EntryRoute: React.FC = () => (
           <Route exact path="/reminds/:remindId" component={ RemindDetailView } />
           <Route exact path="/reminds/:remindId/write" component={ RemindWriteView } />
           <Route exact path="/write" component={ WriteEmotion } />
-          <Route exact path="/login" component= { LoginView } />
+          <Route exact path="/login" component={ LoginView } />
           <Redirect to="/not-found" />
         </Switch>
       </div>

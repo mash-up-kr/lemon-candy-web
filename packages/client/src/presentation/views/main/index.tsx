@@ -38,6 +38,7 @@ const MainView = () => (
     <S.lottie
       src={ IMG_SAMPLE }
     />
+    <Link style={{ color: 'white' }}to='/monthlist'>여기로 가면 감옥뷰 나옴</Link>
     <FloatingButton onClick={ say('클릭') } />
   </S.layout>
 );

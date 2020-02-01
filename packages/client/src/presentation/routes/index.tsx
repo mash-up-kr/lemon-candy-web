@@ -30,9 +30,9 @@ const EntryRoute: React.FC = () => (
           <PrivateRoute exact path="/reminds/:remindId/write" component={ RemindWriteView } />
           <PrivateRoute exact path="/write" component={ WriteEmotion } />
           <Route exact path="/login" component={ LoginView } />
-          <Route path="/daily/:year/:month/:day" component={ Daily }/>
-          <Route exact path="/monthlist" component={ MonthList }/>
-          <Route exact path="/edit/:year/:month/:day" component={ EditEmotion}/>
+          <PrivateRoute exact path="/daily/:year/:month/:day" component={ Daily } />
+          <PrivateRoute exact path="/monthlist" component={ MonthList } />
+          <PrivateRoute exact path="/edit/:year/:month/:day" component={ EditEmotion} />
           <Redirect to="/not-found" />
         </Switch>
       </div>

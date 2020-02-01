@@ -42,6 +42,7 @@ const MainView = () => {
         leftSide={ <Link to="/setting">설정</Link> }
         rightSide={ <Link to="/reminds">리마인드</Link> }
       />
+      <Link style={ { color: 'white' } } to="/monthlist">감옥뷰</Link>
       <S.lottieLayout>
         <LottieComp animationData={ LOTTIE_SAMPLE } isActive width="100%" height="100%" />
       </S.lottieLayout>

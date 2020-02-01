@@ -19,14 +19,17 @@ function useApiCall() {
 const MonthList = () => {
   useApiCall();
   const history = useHistory();
+
   return (
     <div>
-      <Header 
-      leftSide={<img src={back} onClick={() => history.goBack()}/>}
-      title={ dayjs().format('MM월') }/>
+      <Header
+        leftSide="<"
+        leftSideOnClick={ () => { history.goBack(); } }
+        title={ dayjs().format('MM월') }
+      />
       <MonthListComp />
     </div>
   );
-}
+};
 
 export default MonthList;

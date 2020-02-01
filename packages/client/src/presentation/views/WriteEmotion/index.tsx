@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux'
 import WriteEmotionScene from '@/presentation/containers/writeEmotion';
-import { Link } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import Header from "@/presentation/components/header";
 import { DailyArticleActionTypes } from '@/store/dailyArticle/types';
 import moment from 'moment';
@@ -14,6 +14,7 @@ function useLocaleInit() {
 }
 
 const WriteEmotion = () => {
+  const history = useHistory();
   useLocaleInit();
   const [article, setArticle] = useState('');
   const [date, setDate] = useState(moment().format());
@@ -23,21 +24,22 @@ const WriteEmotion = () => {
   const submitHandler = () => {
     const payload = { article, time: moment(date).format('YYYY-MM-DDT00:00:00'), emotion };
     dispatch({ type: DailyArticleActionTypes.REQUEST_SAVE_DAILY_ARTICLE, payload });
-  }
+  };
 
   return (
     <div>
       <Header
         title={ `${moment().format('MM')}월` }
-        leftSide={ <Link to="/setting">뒤로가기</Link> }
+        leftSide="<"
+        leftSideOnClick={ () => { history.goBack(); } }
         rightSide={ <div onClick={ submitHandler }>완료</div> }
       />
-      <WriteEmotionScene 
+      <WriteEmotionScene
         article={ article }
-        setArticle={ setArticle } 
+        setArticle={ setArticle }
         date={ date }
         setDate={ setDate }
-        emotion={ emotion} 
+        emotion={ emotion}
         setEmotion={ setEmotion }/>
     </div>
   );

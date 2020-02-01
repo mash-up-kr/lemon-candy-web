@@ -1,15 +1,15 @@
-import IMG_SAMPLE from '@lemon/icons/imgs/sample.png';
+import LOTTIE_SAMPLE from '@lemon/icons/lottie/angro.json';
 import dayjs from 'dayjs';
 import React from 'react';
+import {
+  Link,
+  RouteComponentProps,
+} from 'react-router-dom';
 import styled from 'styled-components';
 
 import FloatingButton from '@/presentation/components/FloatingButton';
 import Header from '@/presentation/components/header';
-// eslint-disable-next-line import/no-extraneous-dependencies
-import { Redirect } from 'react-router';
-import { Link } from 'react-router-dom';
-
-const say = (val: string) => () => console.log('say', val);
+import LottieComp from '@/presentation/components/LottieComp';
 
 const S = {
   layout: styled.section`
@@ -18,7 +18,7 @@ const S = {
     padding-top: 53px;
     height: 100vh;
   `,
-  lottie: styled.img`
+  lottieLayout: styled.div`
     width: 100%;
     max-width: 600px;
     z-index: 10;
@@ -28,17 +28,17 @@ const S = {
   `,
 };
 
-const MainView = () => (
+const MainView = ({ history }: RouteComponentProps<any>) => (
   <S.layout>
     <Header
       title={ dayjs().format('YYYY') }
       leftSide={ <Link to="/setting">설정</Link> }
-      rightSide={ <Link to="/remind">리마인드</Link> }
+      rightSide={ <Link to="/reminds">리마인드</Link> }
     />
-    <S.lottie
-      src={ IMG_SAMPLE }
-    />
-    <FloatingButton onClick={ say('클릭') } />
+    <S.lottieLayout>
+      <LottieComp animationData={ LOTTIE_SAMPLE } isActive width="100%" height="100%" />
+    </S.lottieLayout>
+    <FloatingButton onClick={ () => { history.push('/write'); } } />
   </S.layout>
 );
 

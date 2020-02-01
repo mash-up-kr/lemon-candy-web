@@ -10,6 +10,10 @@ interface ILottieComp {
 export const LottieWrapper = styled.div`
   display: inline-block;
   margin-left: -35px;
+
+  .add-class {
+    width: 200px !important;
+  }
 `;
 
 export const LottieTitle = styled.div`
@@ -28,18 +32,15 @@ const LottieComp = (props: ILottieComp) => {
     animationData: props.animationData,
     loop: true,
     rendererSettings: {
-    className: 'add-class', // svg에 적용
-    preserveAspectRatio: 'xMidYMid slice'
-  }
+      className: 'add-class', // svg에 적용
+      preserveAspectRatio: 'xMidYMid slice'
+    }
   };
-
   return (
       <Lottie
         options={defaultOptions}
+        isPaused={!isActive}
         isStopped={!isActive}
-        isClickToPauseDisabled={true}
-        width={200}
-        height={200}
 				eventListeners={[
 					{
 						eventName: 'complete',

@@ -10,7 +10,7 @@ interface StyleProps {
 const S = {
   layout: styled.section<StyleProps>`
     width: 100%;
-    height: 100vh;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -21,7 +21,7 @@ const S = {
     width: 100%;
     max-width: 152px;
     margin: 0 0 48px;
-    animation: ${(props) => props.motion} 700ms infinite alternate;
+    animation: ${(props) => props.motion} 350ms infinite alternate;
   `,
   contents: styled.p<StyleProps>`
      font-size: 1rem;

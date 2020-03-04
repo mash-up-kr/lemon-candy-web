@@ -5,4 +5,14 @@ export enum DailyArticleActionTypes {
   REQUEST_SAVE_DAILY_ARTICLE = 'dailyArticle/REQUEST_SAVE_DAILY_ARTICLE',
   SUCCESS_SAVE_DAILY_ARTICLE = 'dailyArticle/SUCCESS_SAVE_DAILY_ARTICLE',
   FAILURE_SAVE_DAILY_ARTICLE = 'dailyArticle/FAILURE_SAVE_DAILY_ARTICLE',
+  REQUEST_EDIT_DAILY_ARTICLE = 'dailyArticle/REQUEST_EDIT_DAILY_ARTICLE',
+  SUCCESS_EDIT_DAILY_ARTICLE = 'dailyArticle/SUCCESS_EDIT_DAILY_ARTICLE',
+  FAILURE_EDIT_DAILY_ARTICLE = 'dailyArticle/FAILURE_EDIT_DAILY_ARTICLE',
 }
+
+export interface IDailyArticle {
+  dailylogId: number,
+  emotion: number, 
+  time: string, 
+  article: string,
+};

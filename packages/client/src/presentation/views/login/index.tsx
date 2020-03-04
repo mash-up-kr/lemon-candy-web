@@ -1,37 +1,70 @@
-import React from 'react';
-import styled from 'styled-components';
-
 import colors from '@lemon/colors';
-import happyImg from '@lemon/icons/imgs/happy.png';
 import facebookImg from '@lemon/icons/imgs/facebook.png';
-import kakaoImg from '@lemon/icons/imgs/kakao.png';
+import happyImg from '@lemon/icons/imgs/happy.png';
 import instagramImg from '@lemon/icons/imgs/instagram.png';
+import kakaoImg from '@lemon/icons/imgs/kakao.png';
+import Error from '@/presentation/components/Error';
+import React, { useEffect, useState } from 'react';
+import styled from 'styled-components';
+import {
+  useHistory,
+} from 'react-router-dom';
 
 import LoginButton from '@/presentation/components/LoginButton';
+import Loading from '@/presentation/components/Lodaing';
 
-const onClickTest = (val: string) => () => console.log("onClick", val);
+const onClickTest = (val: string) => () => alert(`${val}은 준비중 입니다.`);
 
-const LoginView = () => (
-  <S.Layout>
-    <S.Title>Monnday</S.Title>
-    <S.Lottie src={ happyImg } />
-    <S.LoginLine>Login</S.LoginLine>
-    <S.LoginGroup>
-      <LoginButton
-        onClick={onClickTest("Facebook")}
-        src={facebookImg}
-      />
-      <LoginButton
-        onClick={onClickTest('Kakao')}
-        src={kakaoImg}
-      />
-      <LoginButton
-        onClick={onClickTest('Instagram')}
-        src={instagramImg}
-      />
-    </S.LoginGroup>
-  </S.Layout>
-);
+const LoginView = () => {
+  const [state, setState] = useState(200);
+  const history = useHistory();
+
+  useEffect(() => {
+    if (state === 0) {
+      localStorage.setItem('MONNDAY_TOKEN', 'test_token');
+      setTimeout(() => { history.push('/'); }, 350);
+    }
+  }, [state]);
+
+  const fetchLogin = () => setState(0);
+
+  const LoginView = () => (
+    <>
+      <S.Title>Monnday</S.Title>
+      <S.Lottie src={ happyImg } />
+      <S.LoginLine>Login</S.LoginLine>
+      <S.LoginGroup>
+        <LoginButton
+          onClick={ onClickTest('Facebook') }
+          src={ facebookImg }
+        />
+        <LoginButton
+          onClick={ fetchLogin }
+          src={ kakaoImg }
+        />
+        <LoginButton
+          onClick={ onClickTest('Instagram') }
+          src={ instagramImg }
+        />
+      </S.LoginGroup>
+    </>
+  );
+
+  const renderFetchView = () => (
+    // eslint-disable-next-line no-nested-ternary
+    state === 0
+      ? <Loading />
+      : state === 200
+        ? LoginView()
+        : <Error />
+  );
+
+  return (
+    <S.Layout>
+      {renderFetchView()}
+    </S.Layout>
+  );
+};
 
 const S = {
   Layout: styled.section`

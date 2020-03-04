@@ -1,8 +1,7 @@
+import colors from '@lemon/colors';
 import ADD_BUTTON from '@lemon/icons/imgs/btnAdd.png';
 import React from 'react';
 import styled from 'styled-components';
-
-import colors from '@lemon/colors';
 
 interface Props {
   onClick: Function;

@@ -48,6 +48,13 @@ table {
 
 * {
   box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+  -webkit-touch-callout: none;
+}
+
+input, textarea {
+  user-select: text;
 }
 
 html {
@@ -61,14 +68,14 @@ body {
   justify-content: center;
   align-items: flex-start;
   line-height: normal;
-  background: black;
+  background: #131415;
 }
 
 #root {
   width: 100%;
   max-width: 600px;
   min-height: 100vh;
-  background: black;
+  background: #131415;
   overflow: hidden;
 }
 

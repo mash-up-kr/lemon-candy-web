@@ -4,6 +4,7 @@ import {
 
 import PingSaga from '@/store/ping/sagas';
 import DailyArticleSaga from '@/store/dailyArticle/sagas';
+import HomeSaga from '@/store/home/sagas';
 
 const makeRestartable = (saga: any) => function* () {
   yield spawn(function* () {
@@ -19,7 +20,7 @@ const makeRestartable = (saga: any) => function* () {
   });
 };
 
-const sagas = [...PingSaga, ...DailyArticleSaga].map(makeRestartable);
+const sagas = [...PingSaga, ...DailyArticleSaga, ...HomeSaga].map(makeRestartable);
 
 export default function* rootSaga() {
   yield all(sagas.map((saga) => call(saga)));
